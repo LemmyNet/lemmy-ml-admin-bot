@@ -14,6 +14,7 @@ const invalidSequences = [
   "48",
   "Hi! I'm a developer interested in decentralized platforms.",
   "I am an AI",
+  "AI agent",
 ];
 
 const invalidEmails = ["ilands.com"];
