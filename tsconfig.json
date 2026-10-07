@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ],
+    "jsx": "preserve",
+    "noUnusedLocals": true,
+    "strict": false,
+    "rootDir": "./src",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true, // false for non-legacy decorators
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+}

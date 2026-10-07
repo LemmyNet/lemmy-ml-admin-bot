@@ -1,0 +1,50 @@
+{
+  "name": "lemmy-ml-admin-bot",
+  "version": "1.0.0",
+  "description": "An admin bot for lemmy.ml",
+  "repository": "https://github.com/LemmyNet/lemmy-ml-admin-bot",
+  "license": "AGPL-3.0",
+  "author": "Dessalines <tyhou13@gmx.com>",
+  "scripts": {
+    "clean": "pnpm rimraf dist",
+    "lint": "tsc --noEmit && pnpm eslint --report-unused-disable-directives && pnpm prettier:check",
+    "main": "tsx src/main.ts",
+    "prepare": "husky",
+    "prettier:check": "pnpm prettier --check \"src/**/*.{ts,tsx,js,mjs,css,scss}\" README.md package.json tsconfig.json eslint.config.mjs .prettierrc.json",
+    "prettier:write": "pnpm prettier --write \"src/**/*.{ts,tsx,js,mjs,css,scss}\" README.md package.json tsconfig.json eslint.config.mjs .prettierrc.json"
+  },
+  "lint-staged": {
+    "*.{css, scss}": ["prettier --write"],
+    "*.{ts,tsx,js}": ["prettier --write", "eslint --fix"],
+    "package.json": ["prettier --write"]
+  },
+  "dependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.4",
+    "dotenv": "^18.0.5",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lemmy-bot": "^0.6.5",
+    "prettier": "^3.9.9",
+    "prettier-plugin-import-sort": "^0.0.7",
+    "prettier-plugin-organize-imports": "^4.2.0",
+    "prettier-plugin-packagejson": "^3.0.0",
+    "sqlite3": "5.1.7",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.71.1"
+  },
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "engineStrict": true,
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
+  }
+}
