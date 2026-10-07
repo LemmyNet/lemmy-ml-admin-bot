@@ -40,7 +40,6 @@ const bot = new LemmyBot({
 
       console.log(`Processing application #${id}\n`);
       console.log(`name: ${name}\nemail: ${email}\nanswer:\n${answer}\n`);
-      // console.log(JSON.stringify(res.applicationView, null, 2));
 
       // A generic deny form
       let denyForm: ApproveRegistrationApplication = {
