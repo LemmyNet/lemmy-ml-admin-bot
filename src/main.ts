@@ -18,7 +18,7 @@ const invalidAnswers = [
   "AI agent",
 ];
 const invalidEmails = ["ilands.com"];
-const invalidCreatorNames = [""];
+const invalidCreatorNames = [];
 
 const bot = new LemmyBot({
   instance,
