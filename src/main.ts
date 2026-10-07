@@ -26,6 +26,9 @@ const bot = new LemmyBot({
   instance,
   credentials,
   dbFile,
+  connection: {
+    secondsBetweenPolls: 300,
+  },
   markAsBot: false,
   handlers: {
     registrationApplication: res => {
