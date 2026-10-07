@@ -82,7 +82,7 @@ const bot = new LemmyBot({
       // If you've provided a deny reason, then log it and deny
       if (denyForm.deny_reason) {
         console.log(`Denying application because: ${denyForm.deny_reason}`);
-        // res.botActions.approveRegistrationApplication(denyForm);
+        res.botActions.approveRegistrationApplication(denyForm);
       } else {
         console.log("No action taken");
       }
