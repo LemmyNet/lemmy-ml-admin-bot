@@ -14,9 +14,16 @@
     "prettier:write": "pnpm prettier --write \"src/**/*.{ts,tsx,js,mjs,css,scss}\" README.md package.json tsconfig.json eslint.config.mjs .prettierrc.json"
   },
   "lint-staged": {
-    "*.{css, scss}": ["prettier --write"],
-    "*.{ts,tsx,js}": ["prettier --write", "eslint --fix"],
-    "package.json": ["prettier --write"]
+    "*.{css, scss}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "package.json": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@eslint/js": "^10.0.1",

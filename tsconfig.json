@@ -4,13 +4,8 @@
     "allowSyntheticDefaultImports": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "types": [
-      "node"
-    ],
+    "lib": ["es6", "dom"],
+    "types": ["node"],
     "jsx": "preserve",
     "noUnusedLocals": true,
     "strict": false,
@@ -23,8 +18,5 @@
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
