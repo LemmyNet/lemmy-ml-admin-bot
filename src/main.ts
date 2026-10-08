@@ -29,7 +29,7 @@ const bot = new LemmyBot({
   },
   markAsBot: false,
   handlers: {
-    registrationApplication: res => {
+    registrationApplication: async res => {
       // The important fields
       const id = res.applicationView.registration_application.id;
       const name = res.applicationView.creator.name;
@@ -40,7 +40,7 @@ const bot = new LemmyBot({
       console.log(`name: ${name}\nemail: ${email}\nanswer:\n${answer}\n`);
 
       // A generic deny form
-      let denyForm: ApproveRegistrationApplication = {
+      const denyForm: ApproveRegistrationApplication = {
         id,
         approve: false,
       };
@@ -67,7 +67,7 @@ const bot = new LemmyBot({
       // If you've provided a deny reason, then log it and deny
       if (denyForm.deny_reason) {
         console.log(`Denying application because: ${denyForm.deny_reason}`);
-        res.botActions.approveRegistrationApplication(denyForm);
+        await res.botActions.approveRegistrationApplication(denyForm);
       } else {
         console.log("No action taken");
       }
