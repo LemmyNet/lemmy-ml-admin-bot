@@ -16,8 +16,10 @@ const invalidAnswers = [
   "Hi! I'm a developer interested in decentralized platforms.",
   "I am an AI",
   "AI agent",
+  "I would like to join Lemmy.ml because",
+  "to participate in online communities",
 ];
-const invalidEmails = ["ilands.com"];
+const invalidEmails = ["ilands.com", "ilands.app"];
 const invalidCreatorNames = [];
 
 const bot = new LemmyBot({
@@ -50,7 +52,7 @@ const bot = new LemmyBot({
         denyForm.deny_reason = "Answer was empty.";
       }
 
-      // Deny any of the invalid sequences
+      // Deny any of the invalid answers
       else if (sequencesIncludes(answer, invalidAnswers)) {
         denyForm.deny_reason = "Answer contained an invalid sequence.";
       }
@@ -59,6 +61,7 @@ const bot = new LemmyBot({
       else if (sequencesIncludes(email, invalidEmails)) {
         denyForm.deny_reason = "Invalid email.";
       }
+
       // Deny any of the invalid names
       else if (sequencesIncludes(name, invalidCreatorNames)) {
         denyForm.deny_reason = "Invalid name.";
