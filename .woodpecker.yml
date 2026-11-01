@@ -10,7 +10,7 @@ steps:
       - event: pull_request
 
   install:
-    image: node:24-alpine
+    image: node:26-alpine
     commands:
       - *install_pnpm
       - pnpm i
@@ -18,7 +18,7 @@ steps:
       - event: pull_request
 
   lint:
-    image: node:24-alpine
+    image: node:26-alpine
     commands:
       - *install_pnpm
       - pnpm lint
