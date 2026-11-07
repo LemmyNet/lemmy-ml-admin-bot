@@ -3,6 +3,11 @@ import LemmyBot, {
   BotCredentials,
 } from "lemmy-bot";
 import "dotenv/config";
+import {
+  invalidAnswers,
+  invalidCreatorNames,
+  invalidEmails,
+} from "./definitions";
 
 const instance = "lemmy.ml";
 const dbFile = "bot.sqlite";
@@ -10,17 +15,6 @@ const credentials: BotCredentials = {
   username: process.env.USERNAME!,
   password: process.env.PASSWORD!,
 };
-
-const invalidAnswers = [
-  "48",
-  "Hi! I'm a developer interested in decentralized platforms.",
-  "I am an AI",
-  "AI agent",
-  "I would like to join Lemmy.ml because",
-  "to participate in online communities",
-];
-const invalidEmails = ["ilands.com", "ilands.app"];
-const invalidCreatorNames = [];
 
 const bot = new LemmyBot({
   instance,
