@@ -5,6 +5,7 @@ export const invalidAnswers = [
   "AI agent",
   "I would like to join Lemmy.ml because",
   "to participate in online communities",
+  "if_you're_a_bot",
 ];
 export const invalidEmails = [
   "ilands.com",
